@@ -36,7 +36,7 @@ void getMessage()
     {
         cout << "Enter Message: " << endl;
         string message;
-        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        //cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::getline(std::cin, message);
         sendPacket(message);
     }
