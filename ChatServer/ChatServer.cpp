@@ -40,7 +40,7 @@ void getMessage()
     {
         std::cout << "Enter Message: " << std::endl;
         string message;
-        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        //cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::getline(std::cin, message);
         sendPacket(message);
     }
@@ -59,6 +59,7 @@ void sendPacket(string message)
     /* One could just use enet_host_service() instead. */
     //enet_host_service();
     enet_host_flush(server);
+
 }
 
 int main()
@@ -100,7 +101,7 @@ int main()
 
                 {
 
-                        //getMessageThread = thread(getMessage);
+                    //getMessageThread = thread(getMessage);
 
                     /*
                     //Create thread for server messaging
